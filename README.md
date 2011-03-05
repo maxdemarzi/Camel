@@ -6,18 +6,18 @@ An e-mail capturing "coming soon" Sinatra application ready for deployment to [H
 Instructions
 -------------
 
-# Create an account at the [Heroku signup page](http://heroku.com/signup).
-# Install the gem: @sudo gem install heroku@
-# Clone this repo: @git clone git://github.com/maxdemarzi/camel [appname]@
-# @cd appname@
-# @heroku create [optional-app-name]@ (You can rename your app with @heroku rename@)
-# @git push heroku master@
+  Create an account at the [Heroku signup page](http://heroku.com/signup).
+  sudo gem install heroku
+  git clone git://github.com/maxdemarzi/camel [appname]
+  cd appname
+  heroku create [optional-app-name] (You can rename your app with heroku rename)
+  git push heroku master
 
 To add custom domains to your new app:
 
-# @heroku addons:add custom_domains@
-# @heroku domains:add www.yournewdomain.com@
-# @heroku domains:add yournewdomain.com@
+  @heroku addons:add custom_domains@
+  @heroku domains:add www.yournewdomain.com@
+  @heroku domains:add yournewdomain.com@
 
 
 Credits
