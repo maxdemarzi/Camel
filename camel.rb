@@ -27,7 +27,7 @@ class Camel < Sinatra::Base
     @prelaunch_subscriber = PrelaunchSubscriber.new
     @prelaunch_subscriber.email = params[:email]
 
-    if @prelaunch_subscriber.valid?
+    if @prelaunch_subscriber.save
       redirect '/thanks'
     else
       haml :new

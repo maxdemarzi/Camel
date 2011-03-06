@@ -9,12 +9,18 @@ class PrelaunchSubscriber
     :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
     :message => 'That email address doesn\'t look right.'
 
-  after_validation :add_to_campaign_monitor, :if => :campaign_monitor_configured?
+  def save
+    if valid?
+      add_to_campaign_monitor if campaign_monitor_configured?
+    else
+      false
+    end
+  end
 
   private
 
   def add_to_campaign_monitor
-    list_id = settings.campaign_monitor_list_id
+    list_id = Camel.settings.campaign_monitor_list_id
     CreateSend::Subscriber.add(list_id, email, "", [], true)
   end
 

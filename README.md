@@ -6,12 +6,12 @@ An e-mail capturing "coming soon" Sinatra application ready for deployment to [H
 Instructions
 -------------
 Create an account on [Campaign Monitor](http://www.campaignmonitor.com/)
-Follow the [Getting Started](http://www.campaignmonitor.com/api/getting-started/) guide to get your API id and Subscriber List ID
+Follow the [Getting Started](http://www.campaignmonitor.com/api/getting-started/) guide to get your API Key and Subscriber List ID
 
 Create an account at the [Heroku signup page](http://heroku.com/signup).
 
     sudo gem install heroku
-    git clone git://github.com/maxdemarzi/camel [appname]
+    git clone git://github.com/maxdemarzi/Camel [appname]
     cd appname
 
 Replace the following lines in camel.rb
