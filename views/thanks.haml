@@ -1,2 +1,30 @@
-<p>Thank you for your interest.</p>
-<p>We have sent you an email to confirm your subscription to our prelaunch mailing list.</p>
+!!!
+%html
+  %head
+    %link(rel="stylesheet" href="/css/camel.css")
+    %title= settings.app_name
+
+  %body
+    %header
+      %section#title
+        %h1 #{settings.app_name} 
+        %p is launching soon.
+
+    %section#content
+      %img{:src => '/images/rocket.png'}
+      %p Thank you for your interest.
+      %p We have sent you an email to confirm your subscription to our prelaunch mailing list.
+
+    %footer
+      .left
+        Created by
+        %a{:href => "http://twitter.com/maxdemarzi"} Max De Marzi
+        using 
+        %a{:href => "http://campaignmonitor.com", :target => "_blank"} Campaign Monitor
+        and hosted on
+        %a{:href => "http://heroku.com", :target => "_blank"} Heroku.
+        Rocket Image purchased from
+        %a{:href => "http://www.istockphoto.com/file_closeup/?id=7021025"} iStockphoto.
+      .right
+        Code is available at
+        %a{:href => "https://github.com/maxdemarzi/camel", :target => "_blank"} Github   

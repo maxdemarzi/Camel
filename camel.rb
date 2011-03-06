@@ -10,10 +10,13 @@ class Camel < Sinatra::Base
 
   set :campaign_monitor_api_key,  "Your Campaign Monitor API Key"
   set :campaign_monitor_list_id,  "Your Campaign Monitor API Subscriber List ID"
+  set :app_name, "The Name of your Application"
 
   configure do
     CreateSend.api_key(settings.campaign_monitor_api_key)
   end
+
+  use Rack::Session::Cookie
 
   get '/' do
     @prelaunch_subscriber = PrelaunchSubscriber.new
@@ -21,9 +24,11 @@ class Camel < Sinatra::Base
   end
 
   post '/create' do
-    @prelaunch_subscriber = PrelaunchSubscriber.new(params[:prelaunch_subscriber])
+    @prelaunch_subscriber = PrelaunchSubscriber.new
+    @prelaunch_subscriber.email = params[:email]
+
     if @prelaunch_subscriber.valid?
-      redirect_to '/thanks'
+      redirect '/thanks'
     else
       haml :new
     end

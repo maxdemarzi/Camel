@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "GraublauWeb";
+    src: url(/fonts/GraublauWeb.otf) format("truetype");
+}
+@font-face {
+    font-family: "GraublauWeb";
+    font-weight: bold;
+    src: url(/fonts/GraublauWebBold.otf) format("truetype");
+}
+
+header, footer, section, nav { display:block; }
+
+footer {
+	margin-top: 5px;
+	padding: 10px;
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	right: 10px;
+	font-family: GraublauWeb, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.4;
+	/* clearing */
+	overflow: auto;
+}
+
+footer .left {
+	float: left;
+}
+
+footer .right {
+	float: right;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+	/*border-bottom: 2px solid #000;*/
+}
+
+header {
+	margin: 0;
+	padding: 5px;
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	right: 0px;
+	margin-top: 5px;
+	margin: auto;
+	width: 600px;
+}
+
+header section#title {
+	float: left;
+	margin-top: 5px;
+}
+
+header section#title h1 {
+	font-size:40px;
+}
+
+
+
+header section#title p {
+	margin: 0;
+	padding: 0;
+	margin-left: 10px;
+	font-family: GraublauWeb, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:12px;
+	line-height:1.4;	
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,body {
+	margin:0px;
+	padding:0px;
+	color: #555;
+	
+	font-family: GraublauWeb, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+	background: #eaefe0;
+	background: #cdcdcd;
+}
+
+
+
+xs {
+	color: #a68d49;
+       color: #cdcdcd;
+}
+
+body {
+	padding:5px;
+}
+
+header h1 {
+	font-family: GraublauWeb, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 800px;
+	color: black;
+	font-weight: bold;
+	margin: 0px;	
+	font-size:30px;
+	padding: 0px;
+	margin-left: 10px;
+}
+
+
+section#content {
+	position: absolute;
+	top: 50px;
+	bottom: 200px;
+	left: 0px;
+	right: 0px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+}
+
+section#content img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+p.summary img {
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+

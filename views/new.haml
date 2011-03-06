@@ -1,35 +1,23 @@
 !!!
 %html
   %head
-    %link(rel="stylesheet" href="/css/global.css")
-    %title Camel
+    %link(rel="stylesheet" href="/css/camel.css")
+    %title= settings.app_name
 
   %body
     %header
       %section#title
-        %h1 Camel
-        %p Coming Soon...
-      %br{:style => "clear: both;"}
+        %h1 #{settings.app_name} 
+        %p is launching soon.
+
     %section#content
-      - if flash[:notice] 
-         = flash[:notice].html_safe
-      - else 
-        %p Our new website is launching soon.
-        %p Add your name to the list and you will be the first to know when we are ready.
-        - form_for @prelaunch_subscriber, :url => prelaunch_path do |f| 
-          .field
-            = f.text_field :email
-            - if @prelaunch_subscriber.errors[:email] 
-              .form-error
-                = @prelaunch_subscriber.errors[:email].first
-          .actions
-            = f.submit 'Add me to the list'
-    %footer
-      .left
-        Created by
-        %a{:href => "http://twitter.com/maxdemarzi"} Max De Marzi
-      .right
-        using 
-        %a{:href => "http://http://www.campaignmonitor.com", :target => "_blank"} Campaign Monitor
-        | Code available at
-        %a{:href => "https://github.com/maxdemarzi/camel", :target => "_blank"} Github    
+      %img{:src => '/images/rocket.png'}
+      %p Sign up to receive news on the launch of #{settings.app_name}
+      %form{:action => "/create", :method => "post"}
+        %label E-Mail:
+        %input#email{:type => "text", :value => "#{@prelaunch_subscriber.email}", :name => "email"}
+        %input#submit{:type => "submit", :value => "Add me to the list", :class => "button"}
+        - if @prelaunch_subscriber.errors[:email] 
+          .form-error
+            = @prelaunch_subscriber.errors[:email].first
+

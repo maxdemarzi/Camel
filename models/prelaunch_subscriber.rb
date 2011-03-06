@@ -2,6 +2,8 @@ class PrelaunchSubscriber
   include ActiveModel::Validations
   include ActiveModel::Validations::Callbacks
 
+  attr_accessor :email 
+
   validates_presence_of :email, :message => 'Please enter your email address first.'
   validates_format_of :email,
     :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
@@ -17,7 +19,7 @@ class PrelaunchSubscriber
   end
 
   def campaign_monitor_configured?
-    settings.campaign_monitor_api_key != "Your Campaign Monitor API Key" && 
-    settings.campaign_monitor_list_id != "Your Campaign Monitor API Subscriber List ID"
+    Camel.settings.campaign_monitor_api_key != "Your Campaign Monitor API Key" && 
+    Camel.settings.campaign_monitor_list_id != "Your Campaign Monitor API Subscriber List ID"
   end
 end
