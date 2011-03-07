@@ -33,6 +33,10 @@ To add custom domains to your new app:
     heroku domains:add yournewdomain.com
 
 
+Example
+----------
+[http://vouched.heroku.com](http://vouched.heroku.com)
+
 Credits
 ----------
 This project is based on [heroku-sinatra-coming-soon](https://github.com/norbauer/heroku-sinatra-coming-soon) created by [Jonathan Dance](http://wuputah.com/) and [t-minus](https://github.com/johngrimes/t-minus) created by [John Grimes](http://www.smallspark.com.au).

@@ -1,6 +1,5 @@
 class PrelaunchSubscriber 
   include ActiveModel::Validations
-  include ActiveModel::Validations::Callbacks
 
   attr_accessor :email 
 
